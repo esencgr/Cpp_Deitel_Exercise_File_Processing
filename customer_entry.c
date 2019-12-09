@@ -38,6 +38,6 @@ int main(){
         } while (!feof( fptr ));
         fclose( fptr );
     }
-    
+
     return 0;
 }
