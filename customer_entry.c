@@ -5,7 +5,6 @@ int main(){
 
     int no;
     char *name[ 30 ];
-    char str[ 30 ];
     float salary;
     FILE *fptr;
 

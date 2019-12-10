@@ -8,7 +8,7 @@ int main(){
     float account;
     FILE *fptr;
 
-    if ((fptr = fopen( "custom.txt", "r" )) == NULL)
+    if ((fptr = fopen( "credit.txt", "r" )) == NULL)
         printf( "The file is not opened !\n" );
 
     else{
@@ -22,7 +22,7 @@ int main(){
         do {
             printf( "\n?" );
             scanf( "%d", &choose );
-            fscanf( fptr, "%d%s%f", &no, &name, &account );
+            // fscanf( fptr, "%d%s%f", &no, &name, &account );
 
             switch ( choose ){
                 case 1:

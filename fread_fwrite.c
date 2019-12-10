@@ -19,9 +19,9 @@ int main(){
 
     FILE *fs;
     char stock[ 3 ] = { '2','1','1' };
-    
+
     fs = fopen( "testdata_1.txt", "w" );
-    fwrite( stock, 1, 3, fs );
+    fwrite( stock, sizeof(char), 3, fs );
     fclose( fs );
 
     return 0;
