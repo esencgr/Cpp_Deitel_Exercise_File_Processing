@@ -1,0 +1,4 @@
+33 Dunn Stacey 314.33
+37 Barker Doug 0.00
+88 Smith Dave 258.34
+96 Stone Sam 34.98
