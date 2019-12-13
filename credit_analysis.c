@@ -22,7 +22,7 @@ int main(){
         do {
             printf( "\n?" );
             scanf( "%d", &choose );
-            // fscanf( fptr, "%d%s%f", &no, &name, &account );
+            fscanf( fptr, "%d%s%f", &no, &name, &account );
 
             switch ( choose ){
                 case 1:
