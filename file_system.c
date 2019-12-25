@@ -6,7 +6,7 @@ struct data{
 };
 
 int choise( void );
-void create( FILE * );
+void create( FILE *f_ptr );
 void update( FILE * );
 void add( FILE * );
 void delete( FILE * );
@@ -16,7 +16,7 @@ int main(){
     FILE *fptr;
     int the_choise;
 
-    if ((fptr = fopen( "credit0.txt", "r" )) == NULL)
+    if ((fptr = fopen( "file_sys.txt", "r" )) == NULL)
         printf( "The file is not opened !\n" );
 
     else{
@@ -44,13 +44,14 @@ int main(){
 
 int choise( void ){
     int enter;
+
     printf( " \t1 - CREATE\n "
             " \t2 - UPDATE\n "
             " \t3 - ADD   \n "
             " \t4 - CREATE\n "
             " \t5 - QUIT  \n" );
-
     scanf( "%d", &enter );
+
     return enter;
 }
 
@@ -59,19 +60,19 @@ void create( FILE *f_read ){
     FILE *f_write;                                // accounts.txt file pointer
     struct data custom = { 0, "", 0.0 };
 
-    if (( f_write = fopen( "file_sys.txt", "w" )) == NULL)
+    if (( f_write = fopen( "file_sys_new.txt", "w" )) == NULL)
         printf( "The file is not opened !\n" );
 
     else{
-        //rewind( f_read );                         // sets pointer to beginning of file
-        // fprintf( f_write, "%s\t%s\t%s\n", "no", "name", "salary" );
+        rewind( f_write );                         // sets pointer to beginning of file
+        fprintf( f_write, "%s\t%s\t%s\n", "no", "name", "salary" );
 
-        while (!feof( f_read )){                  // copy all records from random-access file into text file
+        while (!feof( f_read )){                  // copy all records from random-access file into text file.
             fread( &custom, sizeof( struct data ), 1, f_read );
-
             if ( custom.no != 0 )                 // write single record to text file
-                fprintf( f_write, "%d\t%s\t\t%lf\n", custom.no, custom.name, custom.salary );
+                fprintf( f_write, "%d\t%s\t%lf\n", custom.no, custom.name, custom.salary );
         }
+
         fclose( f_write );
     }
 }
@@ -103,12 +104,12 @@ void update( FILE *f_ptr ){
         }
 }
 
-/* create and insert record */
-void add( FILE *f_ptr ){
-
-}
-
-/* delete an existing record */
-void delete( FILE *f_ptr ){
-
-}
+// /* create and insert record */
+// void add( FILE *f_ptr ){
+//
+// }
+//
+// /* delete an existing record */
+// void delete( FILE *f_ptr ){
+//
+// }
