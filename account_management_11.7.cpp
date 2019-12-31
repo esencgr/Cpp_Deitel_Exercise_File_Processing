@@ -93,6 +93,8 @@ int main(){
        if ( masterAccount == transactionAccount ) {
           masterBalance += transactionBalance;
           printOutput( outNewMaster, masterAccount, masterFirstName, masterLastName, masterBalance );
+          // outNewMaster << masterAccount << " " << masterFirstName << " " << masterLastName << " " << masterBalance << endl;
+          // cout << masterAccount << " " << masterFirstName << " " << masterLastName << " " << masterBalance << endl;
        }
 
        inTransaction >> transactionAccount >> transactionBalance;
