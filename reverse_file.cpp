@@ -5,7 +5,6 @@
 using namespace std;
 
 string reverse( string str ){
-  
      int s = str.size(  );
      char *p = &str[ 0 ] + ( s-1 );
      char *q = &str[ 0 ];
@@ -27,7 +26,6 @@ string reverse( string str ){
 }
 
 int main(){
-
     ifstream input( "testdata_3.txt" );
     ofstream output( "testdata_3_out.txt" );
     string s;
