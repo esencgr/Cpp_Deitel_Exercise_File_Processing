@@ -5,11 +5,11 @@
 using namespace std;
 
 string reverse( string str ){
+  
      int s = str.size(  );
-
      char *p = &str[ 0 ] + ( s-1 );
      char *q = &str[ 0 ];
-     
+
      // char *p = &str[ 0 ];
      // for (; *p != '\0';)
      //     p++;
@@ -36,6 +36,7 @@ int main(){
         cout << reverse( s ) << endl;
         output << reverse( s ) << endl;
     }
+
     input.close();
     output.close();
 
