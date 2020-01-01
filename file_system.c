@@ -6,7 +6,7 @@ struct data{
 };
 
 int choise( void );
-void create( FILE *f_ptr );
+void create( FILE * );
 void update( FILE * );
 void add( FILE * );
 void delete( FILE * );
