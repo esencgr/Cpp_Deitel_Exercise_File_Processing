@@ -11,7 +11,7 @@ struct person{
 int main(){
 
     //open file for writing
-    ofstream file("name_age.txt");
+    ofstream file("person_name_age.txt");
     person person_info = { "", "", 0 };
 
     for (int i = 0; i < 100; i++){
